@@ -1,0 +1,24 @@
+{C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Keypad_Top
+-- Compiling module Freq_Keypad
+-- Compiling module Keypad
+-- Compiling module Keypad_Encoder
+-- Compiling module debounce_counter
+-- Compiling module Test_keypad
+
+Top level modules:
+	Test_keypad
+
+} {} {}} {C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Keypad_Top
+-- Compiling module Freq_Keypad
+-- Compiling module Keypad
+-- Compiling module Keypad_Encoder
+-- Compiling module debounce_counter
+
+Top level modules:
+	Keypad_Top
+
+} {} {}}

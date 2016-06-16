@@ -1,0 +1,141 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/user/Desktop/DigitalSystemLab/Lab04 _8bit
+vdebounce_counter
+Z0 !s110 1466085815
+!i10b 1
+!s100 n8nB5lgYOz2^lJgHh[<LE1
+I]c<J>b`lE>JB=GB0zAW;P3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/user/Desktop/DigitalSystemLab/Final Project
+Z3 w1466085272
+Z4 8C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v
+Z5 FC:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v
+L0 203
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1466085815.000000
+Z8 !s107 C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v|
+!s101 -O0
+!i113 1
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vFreq_Keypad
+R0
+!i10b 1
+!s100 0?6@3<h4`laHb=Qz2dl<A3
+I8^RhLjhe]W8a=_iZJ;2N20
+R1
+R2
+R3
+R4
+R5
+L0 28
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@freq_@keypad
+vKeypad
+R0
+!i10b 1
+!s100 OmKo<5bzeV3ka9P`T@K:U1
+IzFlYnKXkn0TK>_^g]_c;61
+R1
+R2
+R3
+R4
+R5
+L0 60
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@keypad
+vKeypad_Encoder
+R0
+!i10b 1
+!s100 [h]Km5Wl2W<e^oV=8ANLU1
+IC`S@73dfAgdEI1j2]RBWE1
+R1
+R2
+R3
+R4
+R5
+L0 171
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@keypad_@encoder
+vKeypad_Top
+R0
+!i10b 1
+!s100 QFkgLecn?ecFXn9WKcnRf3
+I]fkC=Qa?o^Xii6L;P[jj^3
+R1
+R2
+R3
+R4
+R5
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@keypad_@top
+vTest_keypad
+R0
+!i10b 1
+!s100 `C6A`Z2fJ:icdfQ4aEaS;1
+I9XYBg4^LzI4=cLMR=GbL_1
+R1
+R2
+w1466085788
+8C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v
+FC:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 keypad.v|C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v|
+!s101 -O0
+!i113 1
+R10
+n@test_keypad
