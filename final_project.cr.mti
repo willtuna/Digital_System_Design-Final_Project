@@ -1,4 +1,22 @@
-{C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v}
+{C:/Users/user/Desktop/DigitalSystemLab/Final Project/spi_interface.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/spi_interface.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module spi_interface
+
+Top level modules:
+	spi_interface
+
+} {} {}} {C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_display.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_display.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fsm
+-- Compiling module ascii_encoder
+-- Compiling module spi_interface
+-- Compiling module display
+-- Compiling module test_display
+
+Top level modules:
+	test_display
+
+} {} {}} {C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_keypad.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Keypad_Top
 -- Compiling module Freq_Keypad
@@ -9,6 +27,24 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	Test_keypad
+
+} {} {}} {C:/Users/user/Desktop/DigitalSystemLab/Final Project/FSM.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/FSM.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fsm
+-- Compiling module ascii_encoder
+
+Top level modules:
+	fsm
+
+} {} {}} {C:/Users/user/Desktop/DigitalSystemLab/Final Project/display.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/display.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fsm
+-- Compiling module ascii_encoder
+-- Compiling module spi_interface
+-- Compiling module display
+
+Top level modules:
+	display
 
 } {} {}} {C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v} {1 {vlog -work work -stats=none {C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

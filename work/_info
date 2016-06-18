@@ -8,38 +8,59 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/user/Desktop/DigitalSystemLab/Lab04 _8bit
-vdebounce_counter
-Z0 !s110 1466085815
+vascii_encoder
+Z0 !s110 1466182258
 !i10b 1
-!s100 n8nB5lgYOz2^lJgHh[<LE1
-I]c<J>b`lE>JB=GB0zAW;P3
+!s100 6B][5@L^=SR<CbOaOSXJm1
+I?B<5COV5>f[SSdg@:^>4;0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/user/Desktop/DigitalSystemLab/Final Project
-Z3 w1466085272
-Z4 8C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v
-Z5 FC:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v
-L0 203
+Z3 w1466182257
+Z4 8FSM.v
+Z5 FFSM.v
+L0 291
 Z6 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z7 !s108 1466085815.000000
-Z8 !s107 C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v|
-Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v|
+Z7 !s108 1466182258.000000
+Z8 !s107 spi_interface.v|FSM.v|display.v|C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_display.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_display.v|
 !s101 -O0
 !i113 1
 Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
-vFreq_Keypad
+vdebounce_counter
 R0
 !i10b 1
-!s100 0?6@3<h4`laHb=Qz2dl<A3
-I8^RhLjhe]W8a=_iZJ;2N20
+!s100 n8nB5lgYOz2^lJgHh[<LE1
+I]c<J>b`lE>JB=GB0zAW;P3
 R1
 R2
-R3
-R4
-R5
-L0 28
+Z11 w1466085272
+Z12 8C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v
+Z13 FC:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v
+L0 203
+R6
+r1
+!s85 0
+31
+R7
+Z14 !s107 C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Final Project/keypad.v|
+!s101 -O0
+!i113 1
+R10
+vdisplay
+R0
+!i10b 1
+!s100 LDR@i?lTZlP<7hHLQG=OI3
+Iz2QBK3819^99nXYG973Kf2
+R1
+R2
+w1466179834
+8display.v
+Fdisplay.v
+L0 10
 R6
 r1
 !s85 0
@@ -50,18 +71,39 @@ R9
 !s101 -O0
 !i113 1
 R10
-n@freq_@keypad
-vKeypad
+vFreq_Keypad
 R0
 !i10b 1
-!s100 OmKo<5bzeV3ka9P`T@K:U1
-IzFlYnKXkn0TK>_^g]_c;61
+!s100 0?6@3<h4`laHb=Qz2dl<A3
+I8^RhLjhe]W8a=_iZJ;2N20
+R1
+R2
+R11
+R12
+R13
+L0 28
+R6
+r1
+!s85 0
+31
+R7
+R14
+R15
+!s101 -O0
+!i113 1
+R10
+n@freq_@keypad
+vfsm
+R0
+!i10b 1
+!s100 TlC<=XBL8W<Di57X^h24`0
+I0P2;j0fjcL<H>jhhDLQH71
 R1
 R2
 R3
 R4
 R5
-L0 60
+L0 22
 R6
 r1
 !s85 0
@@ -69,6 +111,27 @@ r1
 R7
 R8
 R9
+!s101 -O0
+!i113 1
+R10
+vKeypad
+R0
+!i10b 1
+!s100 OmKo<5bzeV3ka9P`T@K:U1
+IzFlYnKXkn0TK>_^g]_c;61
+R1
+R2
+R11
+R12
+R13
+L0 60
+R6
+r1
+!s85 0
+31
+R7
+R14
+R15
 !s101 -O0
 !i113 1
 R10
@@ -80,17 +143,17 @@ R0
 IC`S@73dfAgdEI1j2]RBWE1
 R1
 R2
-R3
-R4
-R5
+R11
+R12
+R13
 L0 171
 R6
 r1
 !s85 0
 31
 R7
-R8
-R9
+R14
+R15
 !s101 -O0
 !i113 1
 R10
@@ -102,10 +165,32 @@ R0
 I]fkC=Qa?o^Xii6L;P[jj^3
 R1
 R2
-R3
-R4
-R5
+R11
+R12
+R13
 L0 8
+R6
+r1
+!s85 0
+31
+R7
+R14
+R15
+!s101 -O0
+!i113 1
+R10
+n@keypad_@top
+vspi_interface
+R0
+!i10b 1
+!s100 ^_d<[o_N;Ge>NdPi<Wc[[2
+I814_?LHbR11>fKeQ7=]8W2
+R1
+R2
+w1466182167
+8spi_interface.v
+Fspi_interface.v
+L0 23
 R6
 r1
 !s85 0
@@ -116,7 +201,27 @@ R9
 !s101 -O0
 !i113 1
 R10
-n@keypad_@top
+vtest_display
+R0
+!i10b 1
+!s100 =YjVAaMLnBTaNK5O=JT6U1
+IPbHA2]MR;KJKGK0UmNBV83
+R1
+R2
+w1466181315
+8C:/Users/user/Desktop/DigitalSystemLab/Final Project/test_display.v
+FC:/Users/user/Desktop/DigitalSystemLab/Final Project/test_display.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
 vTest_keypad
 R0
 !i10b 1
