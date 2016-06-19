@@ -170,7 +170,7 @@ always@(posedge clk)begin
 						//						  
 		`congrat: data_out[out_size-1:0] <= {144'h1B5B6A_434F4E47524154554C4154494F4E53,8'h00};
 						//						  esc[j  C O N G R A T U L A T I O N S   NULL
-		`set_value: data_out[out_size-1:0] <= {24'h1B5B6A,ascii_out[31:24],ascii_out[23:16],ascii_out[15:8],ascii_out[7:0],56'H414E532D534554,40'H2020202000};
+		`set_value: data_out[out_size-1:0] <= {24'h1B5B6A,ascii_out[31:24],ascii_out[23:16],ascii_out[15:8],ascii_out[7:0],16'h2020,56'H414E532D534554,16'H2020,8'h00};
 						//																							  A N S _ S E T              null
         `guess: data_out[out_size-1:0] <= {24'h1B5B6A,ascii_out[31:24],ascii_out[23:16],ascii_out[15:8],ascii_out[7:0],88'h202054525920414741494E,8'h00};
 						//																							  T R Y   A G A I N

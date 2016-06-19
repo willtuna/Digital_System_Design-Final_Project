@@ -1,3 +1,15 @@
+// Remember to reset the "SPI_CLK_COUNT_MAX"
+/*  mode Reference !!!
+`define normal     2'd0// normal output
+`define congrat    2'd1// output Congratulation  !
+`define set_value  2'd2// output Value Set       !
+`define guess      2'd3// output Guess Again     !
+*/
+
+
+/*  Tested issue --------------- Currently Not a Big Issue but it may be a bug fo`r the future !!
+issue one ----------   if set and start not return back to zero it would keep refresh the display !!
+   */
 `ifndef _DISPLAY_V
 `define _DISPLAY_V
 

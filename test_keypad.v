@@ -5,7 +5,7 @@ module Test_keypad;
     reg clk, rst;
 	reg [3:0]in ;
 	wire [3:0] row_select;
-	wire [7:0] enc_out;
+	wire [3:0] enc_out;
 	wire pressed; 
     Keypad_Top keypad(clk, rst, in, row_select,enc_out,pressed);
     /*initial begin
@@ -37,15 +37,15 @@ module Test_keypad;
     #10 rst = 1'b0;
 	end
     initial begin
-    #10000_00 in =4'b1110;
+    #10000_ in =4'b1110;
     #10000_00 in =4'b1111;
-    #10000_00 in =4'b1101;
+    #10000_0000 in =4'b1101;
     #10000_00 in =4'b1111;
-    #10000_00 in =4'b1011;
+    #10000_0000 in =4'b1011;
     #10000_00 in =4'b1111;
-    #10000_00 in =4'b0111;
+    #10000_0000 in =4'b0111;
     #10000_00 in =4'b1111;
-    #10000_00 in =4'b1011;
+    #10000_0000 in =4'b1011;
     #10000_00 in =4'b1111;
     #10000_00 $stop;
     end

@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+//`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Digilent Inc.
 // Engineers: Andrew Skreen
@@ -68,9 +68,9 @@ parameter datasize = 152;
 
 //----------------------------------------------------------------- Changing the speed -------------------------------------------------
 
-//	parameter [11:0] SPI_CLK_COUNT_MAX = 12'H1F4;			// 500
+	parameter [11:0] SPI_CLK_COUNT_MAX = 12'H1F4;			// 500
 
-	parameter [11:0] SPI_CLK_COUNT_MAX = 12'd10;			// 500
+//	parameter [11:0] SPI_CLK_COUNT_MAX = 12'd10;			// 500
 	//-------------------------------------------------------------------------------------------------------------------------------
 	// Toggle sclk when count reaches SPI_CLK_COUNT_MAX
 	reg [11:0] spi_clk_count;

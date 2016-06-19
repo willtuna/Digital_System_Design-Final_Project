@@ -40,38 +40,38 @@ initial begin
     mode = 2'd0;
 end
 
-initial #100000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd2,4'd1,4'd0};
+initial #100000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd15,4'd15,4'd15};
 
 initial begin
 		#100010 set = 1'b1; start =1'b1;
 		end
-initial #100000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd2,4'd1,4'd0};
+initial #200000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd2,4'd15,4'd15};
 
 initial begin
-		#100010 set = 1'b1; start =1'b1;
+		#200010 set = 1'b1; start =1'b1;
 
-		#100000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd10,4'd1,4'd11};
-		#100 set = 1'b1; start =1'b1;
+		#100000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd2,4'd1,4'd15};
+		#100000 set = 1'b1; start =1'b1;
 		
 
 		#100000 {in[3],in[2],in[1],in[0]} = {4'd3,4'd2,4'd1,4'd0};
-		#100 set = 1'b1; start =1'b1;
+		#100000 set = 1'b1; start =1'b1;
 
 		#100000 set = 1'b0; start =1'b0;
 		        mode = 2'd1;
 
-		#100   set = 1'b1; start =1'b1;
+		#100000   set = 1'b1; start =1'b1;
 
 		#100000 set = 1'b0; start =1'b0;
 				{in[3],in[2],in[1],in[0]} = {4'd9,4'd6,4'd5,4'd8};
 				mode = 2'd2;
 
-		#100   set = 1'b1; start =1'b1;
+		#100000   set = 1'b1; start =1'b1;
 		#100000 set = 1'b0; start =1'b0;
-				{in[3],in[2],in[1],in[0]} = {4'd1,4'd6,4'd5,4'd8};
+				{in[3],in[2],in[1],in[0]} = {4'd1,4'd10,4'd3,4'd11};
 				mode = 2'd3;
 
-		#100   set = 1'b1; start =1'b1;
+		#100000   set = 1'b1; start =1'b1;
 
 		#100000 $stop;
 		

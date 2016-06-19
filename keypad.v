@@ -5,11 +5,13 @@
 `define _keypad_v
 
 
-module Keypad_Top(clk, rst, col_in, row_out, enc_out, pressed);
+module keypad_Interface(clk, rst, col_in, row_out, enc_out, pressed);
 		input clk, rst;
 		input [3:0] col_in;
 		output [3:0] row_out;
-		output [7:0] enc_out;
+
+
+		output [3:0] enc_out;
 		output pressed;
 		wire [7:0] keypad_code;  //   pattern {col[3:0], row[3:0]}
 
@@ -26,6 +28,9 @@ endmodule
 
 //   Frequency Divider for keypad //  200 Hz
 module Freq_Keypad(clk, rst ,keypad_clk);
+		parameter period = 6250000;
+	//	parameter period = 900000;
+
 		input clk,rst;
 		output reg keypad_clk;
 
@@ -37,11 +42,11 @@ module Freq_Keypad(clk, rst ,keypad_clk);
 				i =0;
 				keypad_clk = 1'b0;
 				end
-		else if(i<3125000)begin
+		else if(i<(period/2))begin
 				keypad_clk = 1'b0;
 				i = i +1;
 		end
-		else if(i<6250000)begin
+		else if(i<period)begin
 				keypad_clk = 1'b1;
 				i = i +1;		
         end
@@ -159,37 +164,37 @@ endmodule
 
 
 //      Functional Encoed Output
-`define encout_ADD    8'b11110001   
-`define encout_SUB    8'b11110010
-`define encout_Mult   8'b11110011
-`define encout_Div    8'b11110100
-`define encout_Equ    8'b11110101
-`define encout_Clear  8'b11110110
+`define A_reserved    4'd10  
+`define B_reserved    4'd11
+`define D_out         4'd12//  Could be set to Backspace
+`define Enter	      4'd13// Next State Condition
+`define F_Forwart     4'd14 
+`define C_Clear       4'd15
 
 
 
 module Keypad_Encoder(in,out);
 		input [7:0] in;
-		output reg [7:0] out;
+		output reg [3:0] out;
 		always@(*) begin
 				case(in)
-				`zero  : out =  8'b0;
-				`one   : out =  8'd1;
-				`two   : out =  8'd2;
-				`three : out =  8'd3;
-				`four  : out =  8'd4;
-				`five  : out =  8'd5;
-				`six   : out =  8'd6;
-				`seven : out =  8'd7;
-				`eight : out =  8'd8;
-				`nine  : out =  8'd9;
+				`zero  : out =  4'b0;
+				`one   : out =  4'd1;
+				`two   : out =  4'd2;
+				`three : out =  4'd3;
+				`four  : out =  4'd4;
+				`five  : out =  4'd5;
+				`six   : out =  4'd6;
+				`seven : out =  4'd7;
+				`eight : out =  4'd8;
+				`nine  : out =  4'd9;
 
-				`A : out =  `encout_ADD;
-				`B : out =  `encout_SUB;
-				`F : out =  `encout_Mult;
-				`E : out =  `encout_Equ;
-				`D : out =  `encout_Div;
-				`C : out =  `encout_Clear;
+				`A : out =  `A_reserved;
+				`B : out =  `B_reserved;
+			//	`F : out =  `F_Forwart;
+				`E : out =  `Enter;
+			//	`D : out =  `D_out;
+			//	`C : out =  `C_Clear;// For previous step
 				
 				default : out = 8'b11111111;
 		endcase
@@ -217,7 +222,8 @@ reg [5:0] count;
 		end
 
 		always@(*)begin
-				if(rst) pressed = 6'd0;
+				if(rst) pressed = 1'b0;
+				else if	(&in == 1'b1) pressed = 1'b0;
 				else if (count == 6'd30) pressed = 1'b1;
 				else pressed = 1'b0;
 		end
