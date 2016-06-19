@@ -63,8 +63,8 @@ reg  end_display;
 reg [2:0] current_state, next_state;
 reg [26:0] delay_cnt;
 //--------------------------------------------------------------------- delay_cnt_max  setting ---------------------------------
-parameter delay_cnt_max =  //27'd125_000_000;
-   27'd125_00; 
+parameter delay_cnt_max =  27'd125_000_000;
+//   27'd125_00; 
 //------------------------------------------------------------------------------------------------------------------------------
 
 //  ---------------- Put the current value to output the ascii code for output
@@ -158,9 +158,29 @@ parameter delay_cnt_max =  //27'd125_000_000;
 `define guess      2'd3// output Guess Again     !
 */
 
+//------------------------------- slave_select ----------------------
+		always@(posedge clk)begin
+				/*case(current_state)
+					`count_down_state:
+								    if(sus_click == 1'b0 )
+										slave_select <= 1'b0;
+									else
+										slave_select <= 1'b1;
+				    `display_state:
+								    if(end_display && finish == 1'b0)
+										slave_select <= 1'b1;
+								    else if(end_display && finish == 1'b1)
+										slave_select <= 1'b1;
+								    else
+										slave_select <= 1'b0;
+				    default:
+								slave_select <= 1'b1;
+				endcase*/
+				if(rst) slave_select <= 1'b1;
+				else slave_select <= 1'b0;
+		end
 
-
-
+//-------------------------- slave_select--------------------------------------------------
 
 always@(posedge clk)begin
 		if(rst) data_out[out_size-1:0] <= 'd0;
