@@ -168,8 +168,8 @@ endmodule
 `define B_reserved    4'd11
 `define D_out         4'd12//  Could be set to Backspace
 `define Enter	      4'd13// Next State Condition
-`define F_Forwart     4'd14 
-`define C_Clear       4'd15
+//`define F_Forwart     4'd14 
+`define C_Clear       4'd14
 
 
 
@@ -196,7 +196,7 @@ module Keypad_Encoder(in,out);
 			//	`D : out =  `D_out;
 			//	`C : out =  `C_Clear;// For previous step
 				
-				default : out = 8'b11111111;
+				default : out = 4'b1111;
 		endcase
 		end
 endmodule

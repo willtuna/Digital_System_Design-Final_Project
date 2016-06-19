@@ -20,15 +20,31 @@ wire [2:0] keyin_state;
 wire [5:0] display_state;
 wire [1:0] key_in_mode,core_op,core_mode;
 wire off;
+
+reg key_in_off;
+
 wire set,start;
 keypad_Interface keypad1(clk,rst,col_in,row_out,enc_out,pressed);
 
-keyin_counter keyin_cnt(clk,off,enc_out,pressed,core_op,value_out,key_in_mode,keyin_state);
+keyin_counter keyin_cnt(clk,key_in_off,enc_out,pressed,core_op,value_out,key_in_mode,keyin_state);
 core_fsm  core_fsm(clk,rst,pressed,keyin_state,value_out,key_in_mode,display_state,
 				off,core_op,core_mode,set,start,core_value_out);
 
 
 display disp(clk,set,core_value_out,start,rst,core_mode, ss,mosi,miso,sclk,display_state);
+
+
+
+always@(*)begin
+		if(enc_out == 'd14)
+				key_in_off = 1'b1;
+		else
+				key_in_off = off;
+end
+
+
+
+
 
 always@(*)begin
 		if(rst) physical_keyin_state[5:0] = 6'b111111;

@@ -230,9 +230,9 @@ always@(*)begin
 end
 
 always@(*)begin
-		if(solution[11:8] == guess_value[15:11])  B_match[2] <= 3'd1;   else B_match[2] <= 3'd0;
-		if(solution[7:4]  == guess_value[15:11])  B_match[1] <= 3'd1;   else B_match[1] <= 3'd0;
-		if(solution[3:0 ] == guess_value[15:11])  B_match[0] <= 3'd1;   else B_match[0] <= 3'd0;
+		if(solution[11:8] == guess_value[15:12])  B_match[2] <= 3'd1;   else B_match[2] <= 3'd0;
+		if(solution[7:4]  == guess_value[15:12])  B_match[1] <= 3'd1;   else B_match[1] <= 3'd0;
+		if(solution[3:0 ] == guess_value[15:12])  B_match[0] <= 3'd1;   else B_match[0] <= 3'd0;
 		
 		if(solution[15:12] == guess_value[11:8])  B_match[5] <= 3'd1;   else B_match[5] <= 3'd0;
 		if(solution[7:4]   == guess_value[11:8])  B_match[4] <= 3'd1;   else B_match[4] <= 3'd0;
